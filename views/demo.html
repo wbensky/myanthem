@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <script src="/static/js/user.js"></script>
+    <script src="/static/js/major.js"></script>
+    <script src="/static/js/snap.js"></script>
+    <script src="/static/js/correct.js"></script>
+    <script src="/static/js/question.js"></script>
+   <script src="/static/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/project.js"></script>
+    <script src="/static/js/plugins.js"></script>
+    <script src="/static/js/data.js"></script>
+    <script>
+        login({
+            username: "admin",
+            password: "test"
+        }, {});
+getQList({
+        paperId:15
+        },{});
+        
+        /*******major*****/
+
+//        autoCorrect({snapId:3},{});
+       /**********anp*************/
+         //getSnap({snapId:2}, {});
+         //createSnap({title:"title", type:"exp", studentList:JSON.stringify([{studentId:1}, {studentId:2}])},{}); 
+         
+     /************student answer *********/
+        //getStudentAnswer({answerId:1}); 
+         //createStudentAnswer({questionId:1,body:JSON.stringify({"test":1})},{} );
+         
+          
+            
+         /*************answer*******/
+      
+        // deleteAnswer({answerId:1});    
+        //getAnswer({answerId:1 }, {}); 
+                   //createAnswer({questionId:1,body:JSON.stringify({test:"test"}),rightRole:JSON.stringify({name:"name"})}, {})
+           
+        /**************question *********/
+        //getQuestionList({title:"ti"},{}) ;
+        //getQuestion({questionId:1},{});
+        //createQuestion({type:"select", title:"title", body:JSON.stringify({test:"test"}),parentId:0},{});
+        
+        
+        /************problem_collection*/
+         //getProCollList({type:"type"}) 
+         // deleteProColl({proCollId:2}); 
+         //getProColl({proCollId: 1});
+         //createProColl({lessonId:1, state: 0, type:"type", title:"procoll", questions:JSON.stringify([{test:"1"}])}, {}) 
+
+        /********paper************/
+         //getPaperList({projectId:1});
+         //getPaper({paperId:2}); 
+        /* createPaper({
+            title: "paper",
+            type: "exam",
+            projectId: 1,
+         questions:JSON.stringify( [{
+                questionId: 1
+            }]),
+            description:JSON.stringify({test:1}
+            )
+        }, {});
+        */
+
+        /********project********/
+         //createProject({title: "test",type: "exam"},{});
+         //getProject({projectId:5},{});
+         //getProjectList({type:"exam"}{});       
+         // storeProject({projectId:5},{});
+    </script>
+
+
+</head>
+
+<body>
+
+<button id="test"> name</button>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+#login-panel{
+    border: solid 1px #CCC;
+    width: 500px;
+    height: 270px;
+    margin: 34px auto auto auto;
+    background-color: #FFF;
+    box-shadow: inset 2px 2px 2px #000
+}
