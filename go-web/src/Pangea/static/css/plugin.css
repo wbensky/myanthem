@@ -1,0 +1,23 @@
+/*-- support main page switch --*/
+
+body{
+	overflow-x: hidden;
+}
+
+#main-body{
+	position: relative;
+	overflow-x: hidden;
+}
+
+.x-scroll-wrap{
+	position: relative;
+	top: 0;
+	left: 0;
+    width: 8000px;
+}
+
+.x-scroll-wrap .main-page{
+	float: left; 
+	position: relative;
+}
+
