@@ -1,0 +1,399 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="static/css/eelab_theme.css"/>
+<link rel="stylesheet" href="static/css/eelab.css"/>
+<link rel="stylesheet" href="static/morris/morris.css"/>
+</head>
+<body>
+<div class="header">
+    <div class="header-top">
+        <ul  class="nav-top">
+            <li>
+            <a> 设备查询</a>
+            </li>
+            <li>
+            <a> 教学反馈</a>
+            </li>
+        </ul>
+        <div class="search">
+            <p>登陆</p>
+            <input/>
+            <input/>
+        </div>
+    </div>
+    <div class="header-content">
+
+        <div>
+            <img src = "static/img/qdu_logo.png" id="qdu-logo"/>
+        </div>
+        <div class = "nav">
+            <ul class = "nav-list" >
+                <li class="dropdown">
+                <a class="dropdown-button">关于中心 <span class = "icon">&#9662</span></a>
+                <ul class="drop-menu" id = "about-center">
+                </ul>
+                </li>
+                <li class="dropdown">
+                <a class = "dropdown-button">
+                    在线实验 <span class = "icon">&#9662</span>
+                </a>
+
+                <ul class="drop-menu" id = "exp-online">
+                </ul>
+
+                </li>
+                <li class="dropdown">
+                <a>
+                    设备借阅 <span class = "icon">&#9662</span>
+                </a>
+                <ul class="drop-menu" id="device-book">
+                </ul>
+                </li>
+                <li class="dropdown">
+                <a>
+                    创新科技 <span class = "icon">&#9662</span>
+                </a>
+                <ul class="drop-menu" id = "invol-tect">
+                </ul>
+                </li>
+            </ul>
+            <ul class = "nav-menu">
+                <li>
+                网络课堂
+                </li>
+                <li>
+                工程训练
+                </li>
+                <li>
+                教学管理
+                </li>
+                <li>
+                教学交流
+                </li>
+                <li class="last">
+                习题系统
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-content" style="background:url('static/img/total_bk.png');background-size:cover;background-position:center">
+
+    <div class = "sub-page-content">
+        <div class="title">
+            <a> 后台管理</a>
+        </div>
+        <div class = "content">
+            <div class="left">
+                <ul>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="title">
+                    <h4></h4>
+                </div>
+                <hr/>
+                <div class="content">
+                <iframe id="bootstrap-editor" class="editor" src="bootstrap-editor.html">
+                </iframe>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "pop-window" id= "pop-window-add-employee">
+        <div class="add-content">
+            <div class = "t">
+                <h2>教职工</h2>
+            </div>
+            <hr>
+            <div class = content>
+                <div id= "number">
+                    <div class = "title">
+                        序号:
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id= "name">
+                    <div class = "title">
+                        姓名:
+                    </div>
+                    <div class = "edit">
+                        <input>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id="sex">
+                    <div class = "title">
+                        性别:
+                    </div>
+                    <div class = "edit">
+                        <select>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id="birth">
+                    <div class = "title">
+                        出生年月:
+                    </div>
+                    <div class = "edit">
+                        <input/>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id="degree">
+                    <div class = "title">
+                        学位:
+                    </div>
+                    <div class = "edit">
+                        <select>
+                            <option>博士</option>
+                            <option>博士(在读)</option>
+                            <option>硕士</option>
+                            <option>硕士(在读)</option>
+                            <option>本科</option>
+                        </select>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id="post">
+                    <div class = "title">
+                        职务:
+                    </div>
+                    <div class = "edit">
+                        <select>
+                            <option>主任</option>
+                            <option>副主任</option>
+                            <option>支部书记</option>
+                            <option>无</option>
+                        </select>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id="majorpost">
+                    <div class = "title">
+                        职称:
+                    </div>
+                    <div class = "edit">
+                        <select >
+                            <option>教授</option>
+                            <option>副教授</option>
+                            <option>讲师</option>
+                            <option>高级实验师</option>
+                            <option>实验师</option>
+                        </select>
+                    </div>
+                    <div class="show">
+                        
+                    </div>
+                </div>
+
+                <div id="course">
+                    <div class = "title">
+                        学科:
+                    </div>
+                    <div class = "edit">
+                        <input/>
+                    </div>
+                    <div class = "show">
+                    </div>
+                </div>
+
+                <div id="isfulltime">
+                    <div class = "title">
+                        是否专职:
+                    </div>
+                    <div class = "edit">
+                        <select >
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                        </select>
+                    </div>
+                    <div class = "show">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class= "button-block">
+                <div id = "add" class="button cmd" target="add-employee-to-server" >添加</div>
+                <div id = "save" class="button cmd" target="save-employee-to-server" >保存</div>
+                <div id = "cancel" class="button cmd" target="cancel-employee-to-server" >取消</div>
+                <div id = "update" class="button cmd" target="update-employee-to-server" >修改</div>
+                <div id = "delete" class="button cmd" target="delete-employee-to-server" >删除</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "pop-window" id= "pop-window-add-device">
+        <div class="add-content">
+            <div class = "t">
+                <h2>设备</h2>
+            </div>
+            <hr>
+            <div class = content>
+                <div id= "number">
+                    <div class = "title">
+                        编号:
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id= "status">
+                    <div class = "title">
+                        状态:
+                    </div>
+                    <div class = "edit">
+                        <select>
+                            <option>良好</option>
+                            <option>损坏</option>
+                            <option>维修</option>
+                        </select>
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+            </div>
+                <hr>
+            <div class= "button-block">
+                <div id = "add" class="button cmd" target="add-deviceL-to-server" >添加</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "pop-window" id= "pop-window-add-table">
+        <div class="add-content">
+            <div class = "t">
+                <h2></h2>
+            </div>
+            <hr>
+            <div class = content>
+                <div id= "c1">
+                    <div class = "title">
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                 <div id= "c2">
+                    <div class = "title">
+
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                  <div id= "c3">
+                    <div class = "title">
+                    
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                   <div id= "c4">
+                    <div class = "title">
+                    
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                 <div id= "c5">
+                    <div class = "title">
+                    
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                 <div id= "c6">
+                    <div class = "title">
+                    
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+            
+            </div>
+                <hr>
+            <div class= "button-block">
+                <div id = "add" class="button cmd" target="add-table-to-server" >添加</div>
+                <div id = "update" class="button cmd" target="update-table-to-server" >修改</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "pop-window" id= "pop-window-add-file">
+        <div class="add-content">
+            <div class = "t">
+                <h2>添加资料</h2>
+            </div>
+            <hr>
+            <div class = content>
+                <div id= "name">
+                    <div class = "title">
+                        名称
+                    </div>
+                    <div class = "edit">
+                        <input />
+                    </div>
+                    <div class="show">
+                    </div>
+                </div>
+                <div id = "upload-file"class="button" style="color:#fff;margin:10px 0">上传文件</div>
+            </div>
+            <hr style="margin-top:18px"/>
+            <div class= "button-block">
+                <div id = "add" class="button cmd" target="add-file-to-server" >添加</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="static/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="static/js/lib/jquery.form.js"></script>
+    <script src="static/js/plugin/plugins.js"></script>
+    <script src="static/js/data/map.js"></script>
+    <script src="static/js/eelab_utils.js"></script>
+    <script src="static/js/eelab_theme.js"></script>
+    <script src="static/js/eelab.js"></script>
+    <script src="static/js/eelab-admin.js"></script>
+    <script src="static/morris/raphael.js"></script>
+    <script src="static/morris/morris.min.js"></script>
+    </body>
+    </html>
