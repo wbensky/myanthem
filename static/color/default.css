@@ -33,10 +33,11 @@ body, h3, h2, p, a, b, h4{
 }
 .lb-overlay{
 	background: #529abb;
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, #529abb 100%);
+/*	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, #529abb 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,#529abb));
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,#529abb 100%);
 	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,#529abb 100%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,#529abb 100%);
 	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,#529abb 100%);
+*/
 }

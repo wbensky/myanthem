@@ -431,8 +431,8 @@ Works
 	z-index: 1001;
 	color: #fff;
 	position: absolute;
-	top: 43px;
-	left: 50%;
+	top: 64px;
+	left: 70%;
 	
 	font-size: 28px;
 	line-height: 26px;
@@ -471,6 +471,8 @@ Works
 	-o-animation: fadeInScale 1.2s ease-in-out;
 	-ms-animation: fadeInScale 1.2s ease-in-out;
 	animation: fadeInScale 1.2s ease-in-out;
+   	max-width:100%; 
+    margin-top:20px;
 }
 .lb-overlay:target a.lb-close,
 .lb-overlay:target > div{
