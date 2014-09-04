@@ -10,6 +10,9 @@ Imports
 /* ================================
 General
 ================================= */
+html{
+    height:100%;
+}
 body{
 	margin:0;
 	padding:0;
@@ -17,7 +20,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
-	
+    height:100%;	
 }
 
 h1 {
@@ -181,12 +184,10 @@ Intro
 ================================= */
 
 #intro{
-    height:635px;
+    height:100%;
     width:100%;
-    background-color: #529abb;
-    background-image: url(../img/xiaowu2.png);
+    background-image: url(../img/back.jpg);
     background-position:center;
-    background-repeat:no-repeat;
     overflow-y:hidden;
     text-align:center;
     position:relative;
@@ -226,8 +227,9 @@ Intro
 
 .intro-text p span {
 	color:#fff;
-	font-size: 24px;
-	text-align:center;
+	font-size: 33px;
+    line-height:40px;
+    text-align:center;
 	font-weight: 300;
 }
 
