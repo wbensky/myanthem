@@ -143,11 +143,11 @@ Home sections
 /* --- section bg var --- */
 
 .bg-white {
-	background: #fff;
+	background: #f0e0b2;
 }
 
 .bg-gray {
-	background: #f8f8f8;
+	background: #f0e0b2;
 }
 
 .bg-dark {
@@ -171,11 +171,8 @@ Home sections
 Spacer
 ============================= */
 
-#spacer1{	
-	background:#333;
-}
-#spacer2{	
-	background:#333;
+#spacer1, #spacer2{
+	background:#f08f26;
 }
 
 

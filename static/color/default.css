@@ -2,10 +2,11 @@ a, a:hover{
 	color: #529abb;
 }
 .navbar-default{
-	/*background: #529abb;*/
+	background: #fff794;
+    opacity:0.5;
 }
 body, h3, h2, p, a, b, h4{
-	font-family:"微软雅黑";
+	font-family:"微软正黑";
 }
 
 .form-control:focus {
