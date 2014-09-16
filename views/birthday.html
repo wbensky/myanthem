@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://huaqi.jixiangac.com/ -->
+<html class="ks-webkit537 ks-webkit ks-chrome37 ks-chrome">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<!--EMBED src="/mp3/danlian.mp3" autostart="true" loop="true" width="100" height="30" -->
+<style type="text/css">
+body {
+    background:#f1f2f3;
+}
+div {
+}
+.z {
+    display:block;
+    z-index:100;
+    position:absolute;
+}
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: #111a22; */
+    background: #f1f2f4;
+    top: 0;
+    left: 0;
+}
+#text{
+    width:100%;
+    height:100%;
+}
+#text #left{
+    width:50%;
+    left:0;
+    height:100%;
+    position:absolute;
+}
+#text #right{
+    left:50%;
+    width:50%;
+    height:100%;
+    top:0;
+    position:absolute;
+}
+
+.left-p{
+    font-size:50px;
+    color:#e7412b;
+    position:absolute;
+    top:250px;
+    right:200px;
+    opacity:0;
+}
+
+.right-p{
+    position:absolute;
+    font-size:33px;
+    left:200px;
+    color:#e7412b;
+    top:300px;
+    opacity:0;
+}
+</style>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<canvas id="bubble" width="1902" height="1646" style="height:100%; width:100%"></canvas>
+<div id="text" class="z">
+    <div id="left">
+        <p class="left-p">1987年</p>
+    </div>
+    <div id="right" >
+        <p class="right-p"></p>
+    </div>
+</div>
+<script>
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
+
+canvas = document.querySelector('canvas')
+ctx = canvas.getContext('2d')
+
+onresize = function() {
+    canvas.width = canvas.clientWidth
+        canvas.height = canvas.clientHeight
+}
+onresize();
+
+
+onmousemove = function(e) {
+    rect = canvas.getBoundingClientRect();
+    gravityPoint = {
+x: e.clientX - rect.left,
+   y: e.clientY - rect.top
+    }
+}
+
+gravityPoint = {
+x: canvas.width / 2,
+   y: canvas.height / 2
+}
+gravityStrength = 10
+particles = []
+
+calculate = function() {
+    for (var i = 0; i < particles.length; i++) {
+        p = particles[i]
+            x = gravityPoint.x - p.x
+            y = gravityPoint.y - p.y
+            a = x * x + y * y
+            a = a = a > 100 ? gravityStrength / a : gravityStrength / 100
+            p.xv = (p.xv + a * x) * 0.99
+            p.yv = (p.yv + a * y) * 0.99
+            p.x += p.xv
+            p.y += p.yv
+            p.a *= 0.99
+    }
+}
+
+draw = function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+        for (var i = 0; i < particles.length; i++) {
+            p = particles[i]
+                ctx.globalAlpha = p.a
+                ctx.fillStyle = p.c
+                ctx.beginPath()
+                ctx.arc(p.x, p.y, p.s, 0, 2 * Math.PI)
+                ctx.fill()
+        }
+}
+
+newParticle = function() {
+    type = (Math.random() * 2 | 0)
+        particles.push({
+x: gravityPoint.x - 5 + 10 * Math.random(),
+y: gravityPoint.y - 5 + 10 * Math.random(),
+xv: type ? 18 * Math.random() - 9 : 24 * Math.random() - 12,
+yv: type ? 18 * Math.random() - 9 : 24 * Math.random() - 12,
+c: type ? 'rgb(255,' + ((200 * Math.random()) | 0) + ',' + ((80 * Math.random()) | 0) + ')' : 'rgb(255,255,255)',
+    s: type ? 5 + 10 * Math.random() : 1,
+    a: 1
+    })
+if (particles.length > 100) {
+particles.shift()
+}
+}
+
+setInterval(newParticle, 5)
+
+loop = function() {
+draw()
+calculate()
+requestAnimationFrame(loop)
+}
+requestAnimationFrame(loop)
+</script>
+<script>
+ var year = [
+            "1987年1",
+            "1987年2",
+            "1987年3",
+            "1987年4",
+            "1987年5",
+            "1987年6",
+            "1987年7",
+            "1987年8",
+            "1987年9",
+        ];
+        var year_event=[
+             "王伟龙出生了1",
+             "王伟龙出生了2",
+             "王伟龙出生了3",
+             "王伟龙出生了4",
+             "王伟龙出生了5",
+             "王伟龙出生了6",
+             "王伟龙出生了7",
+             "王伟龙出生了8",
+             "王伟龙出生了9",
+        ];
+$(function(){
+       $("#text").click(function(){
+            deep(0);
+                });
+
+});
+function deep( i){
+    if (i >= 9)
+        return;
+    $(".left-p").html(year[i]);
+    $(".right-p").html(year_event[i]);
+    $(".left-p").css("opacity", 0).css("right", "200px").css("top", "250px");
+    $(".right-p").css("opacity", 0).css("left", "200px").css("top", "300px");
+    $(".left-p").stop().animate({
+            right:"0px",
+            opacity:1,
+            }, 800, function(){
+             $(".left-p").animate({
+                top:"200px",
+                opacity:0,
+                }, 1000);
+            });
+    $(".right-p").stop().animate({
+            left:"0px",
+            opacity:1,
+            }, 800, function(){
+             $(".right-p").animate({
+                top:"350px",
+                opacity:0,
+                }, 1000, function(){
+                    deep(i + 1);
+                });
+            });
+}
+</script>
+</body>
+
+</html>

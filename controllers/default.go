@@ -1,13 +1,17 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
+    "github.com/astaxie/beego"
 )
 
 type MainController struct {
-	beego.Controller
+    beego.Controller
 }
 
 func (this *MainController) Get() {
-	this.TplNames = "index.html"
+    this.TplNames = "index.html"
+}
+
+func (this *MainController) BirthDay() {
+    this.TplNames = "birthday.html"
 }
