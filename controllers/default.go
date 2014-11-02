@@ -9,7 +9,7 @@ type MainController struct {
 }
 
 func (this *MainController) Get() {
-    this.TplNames = "index.html"
+    this.TplNames = "ppt.html"
 }
 
 func (this *MainController) BirthDay() {
