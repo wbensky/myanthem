@@ -9,9 +9,9 @@ type MainController struct {
 }
 
 func (this *MainController) Get() {
-    this.TplNames = "ppt.html"
+    this.TplNames = "birthday.html"
 }
 
 func (this *MainController) BirthDay() {
-    this.TplNames = "birthday.html"
+    this.TplNames = "index.html"
 }
